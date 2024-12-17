@@ -1,0 +1,116 @@
+/* Genel Stil */
+:root {
+  font-size: 16px;
+  --main-color: #00796b;
+  --secondary-color: #f4f4f9;
+  --text-color: #333;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: var(--secondary-color);
+}
+
+header {
+  background: var(--main-color);
+  color: #fff;
+  padding: 1rem 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  width: 120px;
+}
+
+.navbar {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.navbar li a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+#hero {
+  text-align: center;
+  padding: 3rem 1rem;
+  background: #e0f2f1;
+}
+
+#about,
+#activities,
+#team {
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
+.activity-grid,
+.team-grid {
+  display: flex;
+  gap: 1.5rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.activity,
+.team-member {
+  background: #fff;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 1rem;
+  max-width: 300px;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activity img,
+.team-member img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+footer {
+  background: var(--main-color);
+  color: #fff;
+  text-align: center;
+  padding: 1rem 0;
+}
+
+/* Responsive Tasarım */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .navbar {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+
+  .activity-grid,
+  .team-grid {
+    flex-direction: column;
+  }
+}
